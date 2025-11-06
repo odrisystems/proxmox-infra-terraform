@@ -1,0 +1,9 @@
+.env
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+*.tfvars
+*.tfvars.json
+.terraform/
+files/*.pub_key
+files/*.priv_key

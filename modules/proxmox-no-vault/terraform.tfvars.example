@@ -1,0 +1,19 @@
+# Proxmox Connection Settings
+pm_api_url      = "https://proxmox.example.com:8006/api2/json"
+pm_user         = "root@pam"
+pm_password     = "your-proxmox-password"
+
+# VM Configuration
+proxmox_host    = "pve"
+hostname_host_1 = "k8s-master"
+host_1          = "192.168.1.100"
+
+# Network Configuration
+ip_address = "192.168.1.100/24"
+gateway    = "192.168.1.1"
+
+# Cloud-init Configuration
+user_passwd     = "your-user-password"
+public_ssh_key  = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD... your-key"
+private_ssh_key = "LS0tLS1CRUdJTiBPUEVOU1NIIFBSSVZBVEUgS0VZLS0t..." # base64 encoded
+

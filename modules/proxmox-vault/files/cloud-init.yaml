@@ -1,0 +1,48 @@
+#cloud-config
+output:
+  all: "| tee -a /var/log/cloud-init-output.log"
+
+users:
+  - name: k8s
+    groups: [sudo]
+    shell: /bin/bash
+    lock-passwd: false
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    passwd: ${passwd}
+    ssh_authorized_keys:
+      - ${ssh_pub_key}
+ssh_pwauth: True
+expire: False
+
+preserve_hostname: false
+manage_etc_hosts: false
+fqdn: ${hostname}
+
+# Disable cloud-init network management
+network:
+  config: disabled
+
+# Write static IP configuration file using write_files
+write_files:
+  - path: /etc/netplan/50-cloud-init.yaml
+    content: |
+      network:
+        version: 2
+        ethernets:
+          ens18:
+            dhcp4: false
+            addresses:
+              - ${ip_address}
+            gateway4: ${gateway}
+            nameservers:
+              addresses:
+                - 8.8.8.8
+                - 8.8.4.4
+
+runcmd:
+  - netplan apply
+  - mkdir -p ~/.ssh
+  - ssh-keyscan gitlab.com >> ~/.ssh/known_hosts
+  - exit
+
+final_message: "The system is finally up, after $UPTIME seconds"
