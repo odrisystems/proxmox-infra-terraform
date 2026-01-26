@@ -9,22 +9,25 @@ https://www.sistemanugrahprima.com/en/sap-cloud-vs-on-premise-which-one-is-right
 - The article describes deployment characteristics and trade-offs, not detailed SAP module lists.
 - No specific SAP product version numbers were provided for the current on-prem system.
 
-## Core feature inventory and SAP Cloud availability
-The table below inventories the core features and characteristics described in the article.
+## Breakdown 1: Feature inventory from source article
+The table below is a direct inventory of the capabilities and characteristics stated in the
+article. It does not add features beyond the source.
 
-| Core feature or aspect | On-premise (per article) | SAP Cloud (per article) |
-|---|---|---|
-| Hosting ownership and control | Company-owned servers, full control | Vendor hosted, shared responsibility |
-| Cost model | High upfront CapEx for hardware and licenses | Subscription OpEx with lower upfront cost |
-| Maintenance responsibility | Internal IT manages all maintenance | Vendor manages maintenance |
-| Scalability | Limited by hardware, upgrades require investment | Highly flexible and elastic |
-| Security operations | Internal security policies and staffing | Vendor security, encryption, monitoring |
-| System updates and upgrades | Manual, planned, downtime risk | Automatic and periodic |
-| Accessibility | Typically internal network only | Anywhere with internet |
-| Implementation time | Months to over a year | Weeks to months |
-| Customization depth | Deep and extensive customization | Limited vs on-prem |
-| Regulatory and data localization | Strong fit for strict data residency needs | Depends on cloud region and compliance |
-| Internet dependence | Not required for core access | Required for access |
+| Feature or aspect | SAP Cloud (per article) | SAP On-Premise (per article) | Article section |
+|---|---|---|---|
+| Delivery model and hosting | SaaS, hosted on external cloud servers | Installed on company-owned servers | Definition |
+| Ownership and control | Vendor hosted, shared responsibility | Full control over systems and data | Definition, Advantages |
+| Cost model | Subscription OpEx, low upfront | High upfront CapEx for hardware and licenses | Comparison table |
+| Maintenance responsibility | Vendor managed | Internal IT managed | Comparison table |
+| Scalability | Highly flexible, easy to expand | Limited by hardware, upgrades require investment | Comparison table, Disadvantages |
+| System updates | Automatic, periodic, always latest features | Manual upgrades, planned downtime | Comparison table, Advantages, Disadvantages |
+| Accessibility | Anywhere with internet | Generally internal network only | Comparison table |
+| Implementation time | Weeks to months | Months to over a year | Comparison table, FAQ |
+| Customization depth | Limited vs on-prem | Deep customization | Advantages, Disadvantages |
+| Regulatory and data localization | Depends on region and compliance offering | Strong fit for strict localization rules | Advantages, When to choose |
+| Internet dependency | Required for access | Not required for core access | Disadvantages |
+| Security controls | Encryption, automatic backups, 24/7 monitoring, global standards (ISO 27001) | Depends on internal policies and resources | Advantages, FAQ |
+| Migration from on-prem to cloud | Supported via cloud migration without data loss | Source system for migration | FAQ |
 
 ### On-premise capabilities and availability in SAP Cloud
 Legend for availability:
